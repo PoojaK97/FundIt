@@ -74,66 +74,68 @@ class _ProfileMenu2State extends State<ProfileMenu2> {
                       child: Row(
                         children: <Widget>[
                           SizedBox(width: 170),
-                          Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                FlatButton(
-                                  shape: new RoundedRectangleBorder(
-                                      borderRadius:
-                                          new BorderRadius.circular(30.0)),
-                                  color: Colors.grey[200],
-                                  onPressed: () => Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => Details()),
+                          Expanded(
+                            child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  FlatButton(
+                                    shape: new RoundedRectangleBorder(
+                                        borderRadius:
+                                            new BorderRadius.circular(30.0)),
+                                    color: Colors.grey[200],
+                                    onPressed: () => Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => Details()),
+                                    ),
+                                    child: Text(
+                                      '\$10 Investment',
+                                      style: TextStyle(
+                                          fontFamily: 'Typewriter',
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w700,
+                                          color: Colors.indigo[700]),
+                                    ),
                                   ),
-                                  child: Text(
-                                    '\$10 Investment',
-                                    style: TextStyle(
-                                        fontFamily: 'Typewriter',
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w700,
-                                        color: Colors.indigo[700]),
-                                  ),
-                                ),
-                                Text('Boring Company',
-                                    style: TextStyle(
-                                        fontFamily: 'Typewriter',
-                                        fontSize: 25,
-                                        fontWeight: FontWeight.w700,
-                                        color: Colors.black)),
-                                Text('Notes',
-                                    style: TextStyle(
-                                        fontFamily: 'Typewriter',
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w400,
-                                        color: Colors.grey[600])),
-                                Text('Documents',
-                                    style: TextStyle(
-                                        fontFamily: 'Typewriter',
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.grey[600])),
-                                Text('Receipts',
-                                    style: TextStyle(
-                                        fontFamily: 'Typewriter',
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.grey[600])),
-                                Text('Updates from Founders',
-                                    style: TextStyle(
-                                        fontFamily: 'Typewriter',
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.grey[600])),
-                                Text('Invested on 3/8/20',
-                                    style: TextStyle(
-                                        fontFamily: 'Typewriter',
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.indigo[700]))
-                              ]),
+                                  Text('Boring Company',
+                                      style: TextStyle(
+                                          fontFamily: 'Typewriter',
+                                          fontSize: 25,
+                                          fontWeight: FontWeight.w700,
+                                          color: Colors.black)),
+                                  Text('Notes',
+                                      style: TextStyle(
+                                          fontFamily: 'Typewriter',
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w400,
+                                          color: Colors.grey[600])),
+                                  Text('Documents',
+                                      style: TextStyle(
+                                          fontFamily: 'Typewriter',
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w500,
+                                          color: Colors.grey[600])),
+                                  Text('Receipts',
+                                      style: TextStyle(
+                                          fontFamily: 'Typewriter',
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w500,
+                                          color: Colors.grey[600])),
+                                  Text('Updates from Founders',
+                                      style: TextStyle(
+                                          fontFamily: 'Typewriter',
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w500,
+                                          color: Colors.grey[600])),
+                                  Text('Invested on 3/8/20',
+                                      style: TextStyle(
+                                          fontFamily: 'Typewriter',
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w500,
+                                          color: Colors.indigo[700]))
+                                ]),
+                          ),
                         ],
                       ),
                     ),
@@ -168,66 +170,68 @@ class _ProfileMenu2State extends State<ProfileMenu2> {
                       child: Row(
                         children: <Widget>[
                           SizedBox(width: 170),
-                          Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                FlatButton(
-                                  shape: new RoundedRectangleBorder(
-                                      borderRadius:
-                                          new BorderRadius.circular(30.0)),
-                                  color: Colors.grey[200],
-                                  onPressed: () => Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => Details()),
+                          Expanded(
+                            child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  FlatButton(
+                                    shape: new RoundedRectangleBorder(
+                                        borderRadius:
+                                            new BorderRadius.circular(30.0)),
+                                    color: Colors.grey[200],
+                                    onPressed: () => Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => Details()),
+                                    ),
+                                    child: Text(
+                                      '\$15 Investment',
+                                      style: TextStyle(
+                                          fontFamily: 'Typewriter',
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w700,
+                                          color: Colors.indigo[700]),
+                                    ),
                                   ),
-                                  child: Text(
-                                    '\$15 Investment',
-                                    style: TextStyle(
-                                        fontFamily: 'Typewriter',
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w700,
-                                        color: Colors.indigo[700]),
-                                  ),
-                                ),
-                                Text('Neuralink',
-                                    style: TextStyle(
-                                        fontFamily: 'Typewriter',
-                                        fontSize: 25,
-                                        fontWeight: FontWeight.w700,
-                                        color: Colors.black)),
-                                Text('Notes',
-                                    style: TextStyle(
-                                        fontFamily: 'Typewriter',
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w400,
-                                        color: Colors.grey[600])),
-                                Text('Documents',
-                                    style: TextStyle(
-                                        fontFamily: 'Typewriter',
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.grey[600])),
-                                Text('Receipts',
-                                    style: TextStyle(
-                                        fontFamily: 'Typewriter',
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.grey[600])),
-                                Text('Updates from Founders',
-                                    style: TextStyle(
-                                        fontFamily: 'Typewriter',
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.grey[600])),
-                                Text('Invested on 2/1/19',
-                                    style: TextStyle(
-                                        fontFamily: 'Typewriter',
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.indigo[700]))
-                              ]),
+                                  Text('Neuralink',
+                                      style: TextStyle(
+                                          fontFamily: 'Typewriter',
+                                          fontSize: 25,
+                                          fontWeight: FontWeight.w700,
+                                          color: Colors.black)),
+                                  Text('Notes',
+                                      style: TextStyle(
+                                          fontFamily: 'Typewriter',
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w400,
+                                          color: Colors.grey[600])),
+                                  Text('Documents',
+                                      style: TextStyle(
+                                          fontFamily: 'Typewriter',
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w500,
+                                          color: Colors.grey[600])),
+                                  Text('Receipts',
+                                      style: TextStyle(
+                                          fontFamily: 'Typewriter',
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w500,
+                                          color: Colors.grey[600])),
+                                  Text('Updates from Founders',
+                                      style: TextStyle(
+                                          fontFamily: 'Typewriter',
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w500,
+                                          color: Colors.grey[600])),
+                                  Text('Invested on 2/1/19',
+                                      style: TextStyle(
+                                          fontFamily: 'Typewriter',
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w500,
+                                          color: Colors.indigo[700]))
+                                ]),
+                          ),
                         ],
                       ),
                     ),
@@ -261,66 +265,68 @@ class _ProfileMenu2State extends State<ProfileMenu2> {
                       child: Row(
                         children: <Widget>[
                           SizedBox(width: 170),
-                          Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                FlatButton(
-                                  shape: new RoundedRectangleBorder(
-                                      borderRadius:
-                                          new BorderRadius.circular(30.0)),
-                                  color: Colors.grey[200],
-                                  onPressed: () => Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => Details()),
+                          Expanded(
+                            child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  FlatButton(
+                                    shape: new RoundedRectangleBorder(
+                                        borderRadius:
+                                            new BorderRadius.circular(30.0)),
+                                    color: Colors.grey[200],
+                                    onPressed: () => Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => Details()),
+                                    ),
+                                    child: Text(
+                                      '\$20 Investment',
+                                      style: TextStyle(
+                                          fontFamily: 'Typewriter',
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w700,
+                                          color: Colors.indigo[700]),
+                                    ),
                                   ),
-                                  child: Text(
-                                    '\$20 Investment',
-                                    style: TextStyle(
-                                        fontFamily: 'Typewriter',
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w700,
-                                        color: Colors.indigo[700]),
-                                  ),
-                                ),
-                                Text('Deep Mind',
-                                    style: TextStyle(
-                                        fontFamily: 'Typewriter',
-                                        fontSize: 25,
-                                        fontWeight: FontWeight.w700,
-                                        color: Colors.black)),
-                                Text('Notes',
-                                    style: TextStyle(
-                                        fontFamily: 'Typewriter',
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w400,
-                                        color: Colors.grey[600])),
-                                Text('Documents',
-                                    style: TextStyle(
-                                        fontFamily: 'Typewriter',
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.grey[600])),
-                                Text('Receipts',
-                                    style: TextStyle(
-                                        fontFamily: 'Typewriter',
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.grey[600])),
-                                Text('Updates from Founders',
-                                    style: TextStyle(
-                                        fontFamily: 'Typewriter',
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.grey[600])),
-                                Text('Invested on 3/8/20',
-                                    style: TextStyle(
-                                        fontFamily: 'Typewriter',
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.indigo[700]))
-                              ]),
+                                  Text('Deep Mind',
+                                      style: TextStyle(
+                                          fontFamily: 'Typewriter',
+                                          fontSize: 25,
+                                          fontWeight: FontWeight.w700,
+                                          color: Colors.black)),
+                                  Text('Notes',
+                                      style: TextStyle(
+                                          fontFamily: 'Typewriter',
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w400,
+                                          color: Colors.grey[600])),
+                                  Text('Documents',
+                                      style: TextStyle(
+                                          fontFamily: 'Typewriter',
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w500,
+                                          color: Colors.grey[600])),
+                                  Text('Receipts',
+                                      style: TextStyle(
+                                          fontFamily: 'Typewriter',
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w500,
+                                          color: Colors.grey[600])),
+                                  Text('Updates from Founders',
+                                      style: TextStyle(
+                                          fontFamily: 'Typewriter',
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w500,
+                                          color: Colors.grey[600])),
+                                  Text('Invested on 3/8/20',
+                                      style: TextStyle(
+                                          fontFamily: 'Typewriter',
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w500,
+                                          color: Colors.indigo[700]))
+                                ]),
+                          ),
                         ],
                       ),
                     ),
@@ -355,66 +361,68 @@ class _ProfileMenu2State extends State<ProfileMenu2> {
                       child: Row(
                         children: <Widget>[
                           SizedBox(width: 170),
-                          Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                FlatButton(
-                                  shape: new RoundedRectangleBorder(
-                                      borderRadius:
-                                          new BorderRadius.circular(30.0)),
-                                  color: Colors.grey[200],
-                                  onPressed: () => Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => Details()),
+                          Expanded(
+                            child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  FlatButton(
+                                    shape: new RoundedRectangleBorder(
+                                        borderRadius:
+                                            new BorderRadius.circular(30.0)),
+                                    color: Colors.grey[200],
+                                    onPressed: () => Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => Details()),
+                                    ),
+                                    child: Text(
+                                      '\$25 Investment',
+                                      style: TextStyle(
+                                          fontFamily: 'Typewriter',
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w700,
+                                          color: Colors.indigo[700]),
+                                    ),
                                   ),
-                                  child: Text(
-                                    '\$25 Investment',
-                                    style: TextStyle(
-                                        fontFamily: 'Typewriter',
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w700,
-                                        color: Colors.indigo[700]),
-                                  ),
-                                ),
-                                Text('Streamlytics',
-                                    style: TextStyle(
-                                        fontFamily: 'Typewriter',
-                                        fontSize: 25,
-                                        fontWeight: FontWeight.w700,
-                                        color: Colors.black)),
-                                Text('Notes',
-                                    style: TextStyle(
-                                        fontFamily: 'Typewriter',
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w400,
-                                        color: Colors.grey[600])),
-                                Text('Documents',
-                                    style: TextStyle(
-                                        fontFamily: 'Typewriter',
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.grey[600])),
-                                Text('Receipts',
-                                    style: TextStyle(
-                                        fontFamily: 'Typewriter',
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.grey[600])),
-                                Text('Updates from Founders',
-                                    style: TextStyle(
-                                        fontFamily: 'Typewriter',
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.grey[600])),
-                                Text('Invested on 3/8/20',
-                                    style: TextStyle(
-                                        fontFamily: 'Typewriter',
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.indigo[700]))
-                              ]),
+                                  Text('Streamlytics',
+                                      style: TextStyle(
+                                          fontFamily: 'Typewriter',
+                                          fontSize: 25,
+                                          fontWeight: FontWeight.w700,
+                                          color: Colors.black)),
+                                  Text('Notes',
+                                      style: TextStyle(
+                                          fontFamily: 'Typewriter',
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w400,
+                                          color: Colors.grey[600])),
+                                  Text('Documents',
+                                      style: TextStyle(
+                                          fontFamily: 'Typewriter',
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w500,
+                                          color: Colors.grey[600])),
+                                  Text('Receipts',
+                                      style: TextStyle(
+                                          fontFamily: 'Typewriter',
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w500,
+                                          color: Colors.grey[600])),
+                                  Text('Updates from Founders',
+                                      style: TextStyle(
+                                          fontFamily: 'Typewriter',
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w500,
+                                          color: Colors.grey[600])),
+                                  Text('Invested on 3/8/20',
+                                      style: TextStyle(
+                                          fontFamily: 'Typewriter',
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w500,
+                                          color: Colors.indigo[700]))
+                                ]),
+                          ),
                         ],
                       ),
                     ),

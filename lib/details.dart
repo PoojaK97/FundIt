@@ -315,7 +315,7 @@ class _DetailsState extends State<Details> {
                 child: RaisedButton(
                   onPressed: () => Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => MainCard()),
+                    MaterialPageRoute(builder: (context) => HomeScreen()),
                   ),
                   child: Text('Invest'),
                   shape: RoundedRectangleBorder(
@@ -325,10 +325,10 @@ class _DetailsState extends State<Details> {
               ),
               Center(
                 child: RaisedButton(
-                  onPressed: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => HomeScreen()),
-                  ),
+                  //onPressed: () => Navigator.push(
+                  //context,
+                  //MaterialPageRoute(builder: (context) => HomeScreen()),
+                  //),
                   child: Text('Contact Founder'),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(18.0),

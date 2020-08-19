@@ -1,5 +1,6 @@
 //import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 //import 'package:small_b/details.dart';
 import 'package:small_b/login_screen.dart';
 import 'dart:async';
@@ -138,7 +139,7 @@ class HomeScreenState extends State<HomeScreen> {
     await InAppPayments.setIOSCardEntryTheme(themeConfiguationBuilder.build());
   }
 
-  Widget build(BuildContext context) => MaterialApp(
+  Widget build(BuildContext context) => GetMaterialApp(
       theme: ThemeData(canvasColor: Colors.white),
       home: Scaffold(
           body: isLoading

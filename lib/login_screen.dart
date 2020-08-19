@@ -1,10 +1,16 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:small_b/profile-menu.dart';
 import 'package:small_b/register_screen.dart';
 
 import 'constants.dart';
+// import 'services/authservice.dart';
+
+FirebaseUser _user;
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -13,6 +19,47 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   bool _rememberMe = false;
+  final GoogleSignIn _googleSignIn = GoogleSignIn();
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+  bool _showSpinner = false;
+
+  Future<FirebaseUser> _handleSignIn() async {
+    // hold the instance of the authenticated user
+//    FirebaseUser user;
+    // flag to check whether we're signed in already
+    bool isSignedIn = await _googleSignIn.isSignedIn();
+    if (isSignedIn) {
+      // if so, return the current user
+      _user = await _auth.currentUser();
+    } else {
+      final GoogleSignInAccount googleUser = await _googleSignIn.signIn();
+      final GoogleSignInAuthentication googleAuth =
+          await googleUser.authentication;
+      // get the credentials to (access / id token)
+      // to sign in via Firebase Authentication
+      final AuthCredential credential = GoogleAuthProvider.getCredential(
+          accessToken: googleAuth.accessToken, idToken: googleAuth.idToken);
+      _user = (await _auth.signInWithCredential(credential)).user;
+    }
+
+    return _user;
+  }
+
+  void onGoogleSignIn(BuildContext context) async {
+    setState(() {
+      _showSpinner = true;
+    });
+
+    FirebaseUser user = await _handleSignIn();
+
+    setState(() {
+      _showSpinner = true;
+    });
+    //Get.off(ProfileMenu());
+    Navigator.pushReplacement(
+        context, MaterialPageRoute(builder: (context) => ProfileMenu()));
+    //Navigator.pop(context);
+  }
 
   Widget _buildEmailTF() {
     return Column(
@@ -172,7 +219,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   Widget _buildSocialBtn(Function onTap, AssetImage logo) {
     return GestureDetector(
-      onTap: onTap,
+      onTap: () => onGoogleSignIn(context),
       child: Container(
         height: 60.0,
         width: 60.0,
@@ -259,23 +306,23 @@ class _LoginScreenState extends State<LoginScreen> {
           onTap: () => FocusScope.of(context).unfocus(),
           child: Stack(
             children: <Widget>[
-              // Container(
-              //   height: double.infinity,
-              //   width: double.infinity,
-              //   decoration: BoxDecoration(
-              //     gradient: LinearGradient(
-              //       begin: Alignment.topCenter,
-              //       end: Alignment.bottomCenter,
-              //       colors: [
-              //         Color(0xFF73AEF5),
-              //         Color(0xFF61A4F1),
-              //         Color(0xFF478DE0),
-              //         Color(0xFF398AE5),
-              //       ],
-              //       stops: [0.1, 0.4, 0.7, 0.9],
-              //     ),
-              //   ),
-              // ),
+              Container(
+                height: double.infinity,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      // Color(0xFF73AEF5),
+                      //Color(0xFF61A4F1),
+                      //Color(0xFF478DE0),
+                      //Color(0xFF398AE5),
+                    ],
+                    stops: [0.1, 0.4, 0.7, 0.9],
+                  ),
+                ),
+              ),
               Container(
                 height: double.infinity,
                 child: SingleChildScrollView(
