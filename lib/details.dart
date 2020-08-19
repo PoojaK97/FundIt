@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import 'package:small_b/main_pay.dart';
 import 'mainCard.dart';
 import 'videoClass.dart';
 
@@ -322,7 +323,11 @@ class _DetailsState extends State<Details> {
               ),
               Center(
                 child: RaisedButton(
-                  onPressed: () {},
+                  onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => HomeScreen()),
+                  ),
                   child: Text('Contact Founder'),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(18.0),

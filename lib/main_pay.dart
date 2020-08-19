@@ -1,12 +1,12 @@
 /*
  Copyright 2018 Square Inc.
- 
+
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
  You may obtain a copy of the License at
- 
+
  http://www.apache.org/licenses/LICENSE-2.0
- 
+
  Unless required by applicable law or agreed to in writing, software
  distributed under the License is distributed on an "AS IS" BASIS,
  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -17,19 +17,19 @@ import 'dart:async';
 import 'dart:io' show Platform;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:square_in_app_payments/models.dart';
-import 'package:square_in_app_payments/in_app_payments.dart';
-import 'package:square_in_app_payments/google_pay_constants.dart'
-    as google_pay_constants;
+import 'package:small_b/models.dart';
+import 'package:small_b/in_app_payments.dart';
+import 'package:small_b/google_pay_constants.dart'
+as google_pay_constants;
 import 'colors.dart';
 import 'config.dart';
 import 'widgets/buy_sheet.dart';
-
+/*
 void main() => runApp(MaterialApp(
-      title: 'Super Cookie',
-      home: HomeScreen(),
-    ));
-
+  title: 'Super Cookie',
+  home: HomeScreen(),
+));
+*/
 class HomeScreen extends StatefulWidget {
   HomeScreenState createState() => HomeScreenState();
 }
@@ -40,7 +40,7 @@ class HomeScreenState extends State<HomeScreen> {
   bool googlePayEnabled = true;
 
   static final GlobalKey<ScaffoldState> scaffoldKey =
-      GlobalKey<ScaffoldState>();
+  GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
@@ -97,13 +97,13 @@ class HomeScreenState extends State<HomeScreen> {
       home: Scaffold(
           body: isLoading
               ? Center(
-                  child: CircularProgressIndicator(
-                  valueColor:
-                      AlwaysStoppedAnimation<Color>(mainBackgroundColor),
-                ))
+              child: CircularProgressIndicator(
+                valueColor:
+                AlwaysStoppedAnimation<Color>(mainBackgroundColor),
+              ))
               : BuySheet(
-                  applePayEnabled: applePayEnabled,
-                  googlePayEnabled: googlePayEnabled,
-                  applePayMerchantId: applePayMerchantId,
-                  squareLocationId: squareLocationId)));
+              applePayEnabled: applePayEnabled,
+              googlePayEnabled: googlePayEnabled,
+              applePayMerchantId: applePayMerchantId,
+              squareLocationId: squareLocationId)));
 }

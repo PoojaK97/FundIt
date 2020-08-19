@@ -1,5 +1,5 @@
 /*
- Copyright 2019 Square Inc.
+ Copyright 2018 Square Inc.
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -13,7 +13,16 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 */
+import 'package:flutter/material.dart';
 
-const String squareApplicationId = "sandbox-sq0idb-ViQXwuKl3y7L-IkW4nwvEQ";
-const String squareLocationId = "LBRP5MZRYC5E1";
-const String applePayMerchantId = "REPLACE_ME";
+Color monteCarlo = Color(0xFF78CCC5);
+Color alto = Color(0xFFD8D8D8);
+Color jungleGreen = Color(0xFF24988D);
+Color boulder = Color(0xFF7B7B7B);
+
+Color mainBackgroundColor = monteCarlo;
+Color closeButtonColor = alto;
+Color mainButtonColor = jungleGreen;
+Color mainTextColor = jungleGreen;
+Color subTextColor = boulder;
+Color dividerColor = alto;

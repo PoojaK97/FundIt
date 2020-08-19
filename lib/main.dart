@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 //import 'package:small_b/details.dart';
 import 'package:small_b/login_screen.dart';
-
 //import 'package:flutter_screenutil/screenutil.dart';
 
 //import 'details.dart';

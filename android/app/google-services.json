@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "566284017912",
+    "firebase_url": "https://amexcodestreet-18744.firebaseio.com",
+    "project_id": "amexcodestreet-18744",
+    "storage_bucket": "amexcodestreet-18744.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:566284017912:android:301fc29276ae9597475b0d",
+        "android_client_info": {
+          "package_name": "com.example.small_b"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "566284017912-ei6e6068si5e2q6aq9ql6i2dd6ju085g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUJZQ-uQ0A0ejYKjSy0-sixNIhuMy_uNE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "566284017912-ei6e6068si5e2q6aq9ql6i2dd6ju085g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
