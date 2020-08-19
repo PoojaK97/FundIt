@@ -37,7 +37,7 @@ class HomeScreen extends StatefulWidget {
 class HomeScreenState extends State<HomeScreen> {
   bool isLoading = true;
   bool applePayEnabled = false;
-  bool googlePayEnabled = false;
+  bool googlePayEnabled = true;
 
   static final GlobalKey<ScaffoldState> scaffoldKey =
       GlobalKey<ScaffoldState>();
@@ -54,7 +54,7 @@ class HomeScreenState extends State<HomeScreen> {
     await InAppPayments.setSquareApplicationId(squareApplicationId);
 
     var canUseApplePay = false;
-    var canUseGooglePay = false;
+    var canUseGooglePay = true;
     if (Platform.isAndroid) {
       await InAppPayments.initializeGooglePay(
           squareLocationId, google_pay_constants.environmentTest);
