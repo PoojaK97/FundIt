@@ -23,13 +23,13 @@ class _DetailsState extends State<Details> {
             children: <Widget>[
               SizedBox(height: 20),
               VideoClass(
-                videoURL: 'https://www.youtube.com/watch?v=bJh2lr8o_CI',
+                videoURL: 'https://www.youtube.com/watch?v=0TRtSk-ufu0',
                 title: 'Demo pitch ',
               ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(0, 8, 8, 18),
                 child: Text(
-                  'Winc',
+                  'OpenAI',
                   style: theme.textTheme.headline1,
                 ),
               ),
@@ -102,7 +102,7 @@ class _DetailsState extends State<Details> {
               Padding(
                 padding: const EdgeInsets.all(28.0),
                 child: Text(
-                  '"Winc is a data-driven winery that uses real-time customer feedback to make culturally relevant wines at speed & scale"',
+                  '"OpenAI is an AI research and deployment company based in San Francisco, California. Our mission is to ensure that artificial general intelligence benefits all of humanity. The OpenAI Charter describes the principles that guide us as we execute on our mission."',
                   style: theme.textTheme.headline5,
                 ),
               ),
@@ -176,7 +176,8 @@ class _DetailsState extends State<Details> {
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
                   child: Text(
-                    'People connect better with stories than they do with a list of facts. If you want people to actually remember the information from your company profile, take the Zappos approach and tell a story about your brand. ',style: theme.textTheme.headline2,
+                    'People connect better with stories than they do with a list of facts. If you want people to actually remember the information from your company profile, take the Zappos approach and tell a story about your brand. ',
+                    style: theme.textTheme.headline2,
                   ),
                 ),
               ),
@@ -184,7 +185,8 @@ class _DetailsState extends State<Details> {
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
                   child: Text(
-                    'This sounds easy, but when you consider how much Google has done and the hundreds of acquisitions and projects it has been involved in, it\'s hard to limit that to one page.',style: theme.textTheme.headline2,
+                    'This sounds easy, but when you consider how much Google has done and the hundreds of acquisitions and projects it has been involved in, it\'s hard to limit that to one page.',
+                    style: theme.textTheme.headline2,
                   ),
                 ),
               ),
@@ -192,7 +194,8 @@ class _DetailsState extends State<Details> {
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
                   child: Text(
-                    'It\'s also important to note that the company keeps the page dynamic and up-to-date including highlights from Q4. Most company profiles are static and left to gather dust, but Philips updates its at least four times a year.',style: theme.textTheme.headline2,
+                    'It\'s also important to note that the company keeps the page dynamic and up-to-date including highlights from Q4. Most company profiles are static and left to gather dust, but Philips updates its at least four times a year.',
+                    style: theme.textTheme.headline2,
                   ),
                 ),
               ),
@@ -219,9 +222,12 @@ class _DetailsState extends State<Details> {
               ),
               Column(
                 children: <Widget>[
-                  buildFounderRow(name: 'Rishav Raj Jain',position: 'CEO, CO-FOUNDER'),
-                  buildFounderRow(name: 'Sulbha Aggarwal',position: 'COO, CO-FOUNDER'),
-                  buildFounderRow(name: 'Rupakshi Agg',position: 'CTO, CO-FOUNDER'),
+                  buildFounderRow(
+                      name: 'Sam Altman', position: 'CEO, CO-FOUNDER'),
+                  buildFounderRow(
+                      name: 'Chris Clark', position: 'COO, CO-FOUNDER'),
+                  buildFounderRow(
+                      name: 'Greg Brockman', position: 'CTO, CO-FOUNDER'),
                 ],
               ),
               Padding(
@@ -265,7 +271,6 @@ class _DetailsState extends State<Details> {
                                     fontWeight: FontWeight.bold,
                                     fontSize: 20.0),
                               ),
-                              
                               circularStrokeCap: CircularStrokeCap.round,
                               progressColor: Colors.cyan[200],
                             ),
@@ -287,21 +292,19 @@ class _DetailsState extends State<Details> {
                         children: <Widget>[
                           Text(
                               'The graph below illustrated the valuation cap of Winc\'s pror rounds by year'),
-                              CircularPercentIndicator(
-                              radius: 120.0,
-                              lineWidth: 13.0,
-                              animation: true,
-                              percent: 0.2,
-                              center: new Text(
-                                "20.0%",
-                                style: new TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20.0),
-                              ),
-                              
-                              circularStrokeCap: CircularStrokeCap.round,
-                              progressColor: Colors.cyan[200],
+                          CircularPercentIndicator(
+                            radius: 120.0,
+                            lineWidth: 13.0,
+                            animation: true,
+                            percent: 0.2,
+                            center: new Text(
+                              "20.0%",
+                              style: new TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 20.0),
                             ),
+                            circularStrokeCap: CircularStrokeCap.round,
+                            progressColor: Colors.cyan[200],
+                          ),
                         ],
                       ),
                     )
@@ -311,10 +314,9 @@ class _DetailsState extends State<Details> {
               Center(
                 child: RaisedButton(
                   onPressed: () => Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => MainCard()),
-                                ),
+                    context,
+                    MaterialPageRoute(builder: (context) => MainCard()),
+                  ),
                   child: Text('Invest'),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(18.0),
@@ -325,8 +327,7 @@ class _DetailsState extends State<Details> {
                 child: RaisedButton(
                   onPressed: () => Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => HomeScreen()),
+                    MaterialPageRoute(builder: (context) => HomeScreen()),
                   ),
                   child: Text('Contact Founder'),
                   shape: RoundedRectangleBorder(
@@ -353,7 +354,7 @@ class _DetailsState extends State<Details> {
               child: SizedBox(
                 width: 100,
                 height: 100,
-                child: Image.asset("lib/images/person.png"),
+                child: Image.asset("lib/images/sam_altman.png"),
               ),
             ),
           ),
@@ -366,8 +367,6 @@ class _DetailsState extends State<Details> {
     );
   }
 }
-
-
 
 class FundraiseCard extends StatelessWidget {
   const FundraiseCard(

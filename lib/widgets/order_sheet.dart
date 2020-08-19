@@ -103,23 +103,38 @@ class OrderSheet extends StatelessWidget {
           Container(
             height: 64,
             width: MediaQuery.of(context).size.width * .3,
-            child: RaisedButton(
-              onPressed: googlePayEnabled || applePayEnabled
-                  ? () {
-                      if (Platform.isAndroid) {
-                        Navigator.pop(context, PaymentType.googlePay);
-                      } else if (Platform.isIOS) {
-                        Navigator.pop(context, PaymentType.applePay);
-                      }
-                    }
-                  : null,
-              child: Image(
-                  image: (Theme.of(context).platform == TargetPlatform.iOS)
-                      ? AssetImage("assets/applePayLogo.png")
-                      : AssetImage("assets/googlePayLogo.png")),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30.0)),
-              color: Colors.black,
+            child: Center(
+              child: Center(
+                child: Center(
+                  child: Center(
+                    child: Center(
+                      child: Center(
+                        child: RaisedButton(
+                          onPressed: googlePayEnabled || applePayEnabled
+                              ? () {
+                                  if (Platform.isAndroid) {
+                                    Navigator.pop(
+                                        context, PaymentType.googlePay);
+                                  } else if (Platform.isIOS) {
+                                    Navigator.pop(
+                                        context, PaymentType.applePay);
+                                  }
+                                }
+                              : null,
+                          child: Image(
+                              image: (Theme.of(context).platform ==
+                                      TargetPlatform.iOS)
+                                  ? AssetImage("assets/applePayLogo.png")
+                                  : AssetImage("assets/googlePayLogo.png")),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30.0)),
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
             ),
           ),
         ],

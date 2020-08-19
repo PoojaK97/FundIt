@@ -12,18 +12,18 @@ class VideoClass extends StatefulWidget {
 }
 
 class _VideoClassState extends State<VideoClass> {
-  // String videoURL = 'https://www.youtube.com/watch?v=FhhrE3OOcAc';
+  //String videoURL = 'https://www.youtube.com/watch?v=FhhrE3OOcAc';
   YoutubePlayerController controller;
 
   @override
   void initState() {
     controller = YoutubePlayerController(
-        initialVideoId: YoutubePlayer.convertUrlToId(widget.videoURL),
-        flags: YoutubePlayerFlags(
+      initialVideoId: YoutubePlayer.convertUrlToId(widget.videoURL),
+      flags: YoutubePlayerFlags(
         autoPlay: false,
         mute: false,
-    ),
-        );
+      ),
+    );
     super.initState();
   }
 
@@ -33,7 +33,9 @@ class _VideoClassState extends State<VideoClass> {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
-          YoutubePlayer(controller: controller,),
+          YoutubePlayer(
+            controller: controller,
+          ),
           Padding(
             padding: EdgeInsets.all(10),
             child: Text(widget.title,

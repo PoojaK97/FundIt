@@ -19,17 +19,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:small_b/models.dart';
 import 'package:small_b/in_app_payments.dart';
-import 'package:small_b/google_pay_constants.dart'
-as google_pay_constants;
+import 'package:small_b/google_pay_constants.dart' as google_pay_constants;
 import 'colors.dart';
 import 'config.dart';
 import 'widgets/buy_sheet.dart';
-/*
+
 void main() => runApp(MaterialApp(
-  title: 'Super Cookie',
-  home: HomeScreen(),
-));
-*/
+      title: 'Super Cookie',
+      home: HomeScreen(),
+    ));
+
 class HomeScreen extends StatefulWidget {
   HomeScreenState createState() => HomeScreenState();
 }
@@ -40,7 +39,7 @@ class HomeScreenState extends State<HomeScreen> {
   bool googlePayEnabled = true;
 
   static final GlobalKey<ScaffoldState> scaffoldKey =
-  GlobalKey<ScaffoldState>();
+      GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
@@ -97,13 +96,13 @@ class HomeScreenState extends State<HomeScreen> {
       home: Scaffold(
           body: isLoading
               ? Center(
-              child: CircularProgressIndicator(
-                valueColor:
-                AlwaysStoppedAnimation<Color>(mainBackgroundColor),
-              ))
+                  child: CircularProgressIndicator(
+                  valueColor:
+                      AlwaysStoppedAnimation<Color>(mainBackgroundColor),
+                ))
               : BuySheet(
-              applePayEnabled: applePayEnabled,
-              googlePayEnabled: googlePayEnabled,
-              applePayMerchantId: applePayMerchantId,
-              squareLocationId: squareLocationId)));
+                  applePayEnabled: applePayEnabled,
+                  googlePayEnabled: googlePayEnabled,
+                  applePayMerchantId: applePayMerchantId,
+                  squareLocationId: squareLocationId)));
 }

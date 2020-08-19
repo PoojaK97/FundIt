@@ -47,12 +47,12 @@ class _ProfileMenu2State extends State<ProfileMenu2> {
     return Scaffold(
       // backgroundColor: Colors.indigo[50],
       body: SingleChildScrollView(
-              child: Column(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             SizedBox(height: 25),
-            
+
             Padding(
               padding: const EdgeInsets.fromLTRB(18, 15, 8, 10),
               child: Text(
@@ -97,7 +97,7 @@ class _ProfileMenu2State extends State<ProfileMenu2> {
                                         color: Colors.indigo[700]),
                                   ),
                                 ),
-                                Text('AfroTech',
+                                Text('Boring Company',
                                     style: TextStyle(
                                         fontFamily: 'Typewriter',
                                         fontSize: 25,
@@ -146,15 +146,16 @@ class _ProfileMenu2State extends State<ProfileMenu2> {
                     child: Container(
                       height: 180,
                       width: 170,
-                      child: Image.network(
-                       "https://lh6.googleusercontent.com/proxy/5uvRhw0Qz7EbCZGkC4td2ihxie_pm3bg0Zu-DDtvpavHWtaJZejgdeWoDIRfi0uexy88uTzOGI2h_MrkGl2EKfrn-evXwQVF1fBUdzW-lloftR8",fit: BoxFit.cover,
+                      child: Image.asset(
+                        "lib/images/the_boring_company.png",
+                        fit: BoxFit.cover,
                       ),
                     ),
                   ),
                 )
               ],
             ),
-            
+
             //2
             Stack(
               children: <Widget>[
@@ -190,7 +191,7 @@ class _ProfileMenu2State extends State<ProfileMenu2> {
                                         color: Colors.indigo[700]),
                                   ),
                                 ),
-                                Text('Sudu',
+                                Text('Neuralink',
                                     style: TextStyle(
                                         fontFamily: 'Typewriter',
                                         fontSize: 25,
@@ -239,8 +240,9 @@ class _ProfileMenu2State extends State<ProfileMenu2> {
                     child: Container(
                       height: 180,
                       width: 170,
-                      child: Image.network(
-                        "https://cdn.filepicker.io/api/file/sU02HTjMQzsEY2ukg4RH" ),
+                      child: Image.asset(
+                        "lib/images/neuralink.png",
+                      ),
                     ),
                   ),
                 )
@@ -282,7 +284,7 @@ class _ProfileMenu2State extends State<ProfileMenu2> {
                                         color: Colors.indigo[700]),
                                   ),
                                 ),
-                                Text('Lisnr',
+                                Text('Deep Mind',
                                     style: TextStyle(
                                         fontFamily: 'Typewriter',
                                         fontSize: 25,
@@ -331,8 +333,9 @@ class _ProfileMenu2State extends State<ProfileMenu2> {
                     child: Container(
                       height: 180,
                       width: 170,
-                      child: Image.network(
-                        "https://i.ytimg.com/vi/J9boSWf4wno/maxresdefault.jpg",fit: BoxFit.cover,
+                      child: Image.asset(
+                        "lib/images/deep_mind.png",
+                        fit: BoxFit.cover,
                       ),
                     ),
                   ),
@@ -433,7 +436,6 @@ class _ProfileMenu2State extends State<ProfileMenu2> {
                 )
               ],
             ),
-
           ],
         ),
       ),
@@ -528,47 +530,47 @@ class _ProfileMenu2State extends State<ProfileMenu2> {
 
   List<Job> findJobs() {
     List<Job> jobs = [];
-      jobs.add(Job(
-          workTitle: 'Change.org',
-          workSubTitle: 'create campaigns to mobilize supporters',
-          workType: 'Hardware',
-          companyLogo: AssetImage("lib/images/person.png"),
-          moneyRaised: '\$ 56,000 raised',
-          investors: '50 investors',
-          days: '15 days left'));
-      jobs.add(Job(
-          workTitle: 'Crowdpac',
-          workSubTitle: 'Make it easy to understand the laws Congress',
-          workType: 'Investment',
-          companyLogo: AssetImage("lib/images/person.png"),
-          moneyRaised: '\$ 92,000 raised',
-          investors: '80 investors',
-          days: '20 days left'));
-      jobs.add(Job(
-            workTitle: 'Vote.org',
-            workSubTitle: 'Build technology aimed at increasing voter turnout',
-            workType: 'Investment',
-            companyLogo: AssetImage("lib/images/person.png"),
-            moneyRaised: '\$ 1,00,000 raised',
-            investors: '4000 investors',
-            days: '22 days left'));
+    jobs.add(Job(
+        workTitle: 'Change.org',
+        workSubTitle: 'create campaigns to mobilize supporters',
+        workType: 'Hardware',
+        companyLogo: AssetImage("lib/images/person.png"),
+        moneyRaised: '\$ 56,000 raised',
+        investors: '50 investors',
+        days: '15 days left'));
+    jobs.add(Job(
+        workTitle: 'Crowdpac',
+        workSubTitle: 'Make it easy to understand the laws Congress',
+        workType: 'Investment',
+        companyLogo: AssetImage("lib/images/person.png"),
+        moneyRaised: '\$ 92,000 raised',
+        investors: '80 investors',
+        days: '20 days left'));
+    jobs.add(Job(
+        workTitle: 'Vote.org',
+        workSubTitle: 'Build technology aimed at increasing voter turnout',
+        workType: 'Investment',
+        companyLogo: AssetImage("lib/images/person.png"),
+        moneyRaised: '\$ 1,00,000 raised',
+        investors: '4000 investors',
+        days: '22 days left'));
 
-      jobs.add(Job(
-          workTitle: 'Communication',
-          workSubTitle: 'Offer free, 24/7 text-message counseling',
-          workType: 'Investment',
-          companyLogo: AssetImage("lib/images/person.png"),
-          moneyRaised: '\$ 120,000 raised',
-          investors: '5830 investors',
-          days: '23 days left'));
-      jobs.add(Job(
-          workTitle: 'Pigeonly',
-          workSubTitle: 'Create affordable communication products',
-          workType: 'Investment',
-          companyLogo: AssetImage("lib/images/person.png"),
-          moneyRaised: '\$ 140,000 raised',
-          investors: '3762 investors',
-          days: '24 days left'));
+    jobs.add(Job(
+        workTitle: 'Communication',
+        workSubTitle: 'Offer free, 24/7 text-message counseling',
+        workType: 'Investment',
+        companyLogo: AssetImage("lib/images/person.png"),
+        moneyRaised: '\$ 120,000 raised',
+        investors: '5830 investors',
+        days: '23 days left'));
+    jobs.add(Job(
+        workTitle: 'Pigeonly',
+        workSubTitle: 'Create affordable communication products',
+        workType: 'Investment',
+        companyLogo: AssetImage("lib/images/person.png"),
+        moneyRaised: '\$ 140,000 raised',
+        investors: '3762 investors',
+        days: '24 days left'));
     return jobs;
   }
 }

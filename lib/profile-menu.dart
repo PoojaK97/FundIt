@@ -61,7 +61,7 @@ class _ProfileMenuState extends State<ProfileMenu> {
                   child: SizedBox(
                     width: 180,
                     height: 180,
-                    child: Image.asset("lib/images/rishav.png"),
+                    child: Image.asset("lib/images/elon_musk.png"),
                   ),
                 ),
               ),
@@ -71,7 +71,7 @@ class _ProfileMenuState extends State<ProfileMenu> {
             padding: const EdgeInsets.all(15.0),
             child: Center(
                 child: Text(
-              'Rishav Raj Jain',
+              'Elon Musk',
               style: TextStyle(
                   fontFamily: 'Typewriter',
                   fontSize: 20,
@@ -122,7 +122,7 @@ class _ProfileMenuState extends State<ProfileMenu> {
                                       color: Colors.indigo[700]),
                                 ),
                               ),
-                              Text('Winc',
+                              Text('OpenAI',
                                   style: TextStyle(
                                       fontFamily: 'Typewriter',
                                       fontSize: 25,
@@ -171,8 +171,8 @@ class _ProfileMenuState extends State<ProfileMenu> {
                   child: Container(
                     height: 180,
                     width: 170,
-                    child: Image.network(
-                      "https://images.squarespace-cdn.com/content/55a8de09e4b0090a7a1ac6de/1547227750877-9UO6V492X8S6H7DF1610/Albourne_estate_wine%26Vermouth_product-photographer-0011.jpg?content-type=image%2Fjpeg",
+                    child: Image.asset(
+                      "lib/images/open_ai.png",
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -183,17 +183,20 @@ class _ProfileMenuState extends State<ProfileMenu> {
           Padding(
             padding: const EdgeInsets.fromLTRB(18, 18, 18, 0),
             child: Row(
-                  children: <Widget>[
-                    Text('What you Like', style: Theme.of(context).textTheme.headline3),
-                    SizedBox(width: 30),
-                    FlatButton(onPressed: () => Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => ProfileMenu2()),
-                                ),
-                    child: Text('Highlights', style: Theme.of(context).textTheme.headline4))
-                  ],
-                ),
+              children: <Widget>[
+                Text('What you Like',
+                    style: Theme.of(context).textTheme.headline3),
+                SizedBox(width: 30),
+                FlatButton(
+                    onPressed: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ProfileMenu2()),
+                        ),
+                    child: Text('Highlights',
+                        style: Theme.of(context).textTheme.headline4))
+              ],
+            ),
           ),
           Container(
             margin: EdgeInsets.fromLTRB(0, 0, 0, 1),
@@ -296,47 +299,47 @@ class _ProfileMenuState extends State<ProfileMenu> {
 
   List<Job> findJobs() {
     List<Job> jobs = [];
-      jobs.add(Job(
-          workTitle: 'Change.org',
-          workSubTitle: 'create campaigns to mobilize supporters',
-          workType: 'Hardware',
-          companyLogo: AssetImage("lib/images/rishav.png"),
-          moneyRaised: '\$ 56,000 raised',
-          investors: '50 investors',
-          days: '15 days left'));
-      jobs.add(Job(
-          workTitle: 'Crowdpac',
-          workSubTitle: 'Make it easy to understand the laws Congress',
-          workType: 'Investment',
-          companyLogo: AssetImage("lib/images/rishav.png"),
-          moneyRaised: '\$ 92,000 raised',
-          investors: '80 investors',
-          days: '20 days left'));
-      jobs.add(Job(
-            workTitle: 'Vote.org',
-            workSubTitle: 'Build technology aimed at increasing voter turnout',
-            workType: 'Investment',
-            companyLogo: AssetImage("lib/images/rishav.png"),
-            moneyRaised: '\$ 1,00,000 raised',
-            investors: '4000 investors',
-            days: '22 days left'));
+    jobs.add(Job(
+        workTitle: 'Change.org',
+        workSubTitle: 'create campaigns to mobilize supporters',
+        workType: 'Hardware',
+        companyLogo: AssetImage("lib/images/chris_clark.png"),
+        moneyRaised: '\$ 56,000 raised',
+        investors: '50 investors',
+        days: '15 days left'));
+    jobs.add(Job(
+        workTitle: 'Crowdpac',
+        workSubTitle: 'Make it easy to understand the laws Congress',
+        workType: 'Investment',
+        companyLogo: AssetImage("lib/images/greg_brokman.png"),
+        moneyRaised: '\$ 92,000 raised',
+        investors: '80 investors',
+        days: '20 days left'));
+    jobs.add(Job(
+        workTitle: 'Vote.org',
+        workSubTitle: 'Build technology aimed at increasing voter turnout',
+        workType: 'Investment',
+        companyLogo: AssetImage("lib/images/person.png"),
+        moneyRaised: '\$ 1,00,000 raised',
+        investors: '4000 investors',
+        days: '22 days left'));
 
-      jobs.add(Job(
-          workTitle: 'Communication',
-          workSubTitle: 'Offer free, 24/7 text-message counseling',
-          workType: 'Investment',
-          companyLogo: AssetImage("lib/images/rishav.png"),
-          moneyRaised: '\$ 120,000 raised',
-          investors: '5830 investors',
-          days: '23 days left'));
-      jobs.add(Job(
-          workTitle: 'Pigeonly',
-          workSubTitle: 'Create affordable communication products',
-          workType: 'Investment',
-          companyLogo: AssetImage("lib/images/rishav.png"),
-          moneyRaised: '\$ 140,000 raised',
-          investors: '3762 investors',
-          days: '24 days left'));
+    jobs.add(Job(
+        workTitle: 'Communication',
+        workSubTitle: 'Offer free, 24/7 text-message counseling',
+        workType: 'Investment',
+        companyLogo: AssetImage("lib/images/sam_altman.png"),
+        moneyRaised: '\$ 120,000 raised',
+        investors: '5830 investors',
+        days: '23 days left'));
+    jobs.add(Job(
+        workTitle: 'Pigeonly',
+        workSubTitle: 'Create affordable communication products',
+        workType: 'Investment',
+        companyLogo: AssetImage("lib/images/rishav.png"),
+        moneyRaised: '\$ 140,000 raised',
+        investors: '3762 investors',
+        days: '24 days left'));
     return jobs;
   }
 }
