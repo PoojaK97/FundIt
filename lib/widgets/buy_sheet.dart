@@ -14,20 +14,20 @@
  limitations under the License.
 */
 import 'dart:async';
+
 import 'package:built_collection/built_collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:uuid/uuid.dart';
-import 'package:small_b/models.dart';
+import 'package:small_b/google_pay_constants.dart' as google_pay_constants;
 import 'package:small_b/in_app_payments.dart';
-import 'package:small_b/google_pay_constants.dart'
-    as google_pay_constants;
+import 'package:small_b/models.dart';
+import 'package:uuid/uuid.dart';
+
 import '../colors.dart';
 import '../config.dart';
 import '../transaction_service.dart';
 import 'cookie_button.dart';
 import 'dialog_modal.dart';
-// We use a custom modal bottom sheet to override the default height (and remove it).
 import 'modal_bottom_sheet.dart' as custom_modal_bottom_sheet;
 import 'order_sheet.dart';
 
@@ -71,7 +71,7 @@ class BuySheetState extends State<BuySheet> {
 
     switch (selection) {
       case PaymentType.giftcardPayment:
-      // call _onStartGiftCardEntryFlow to start Gift Card Entry.
+        // call _onStartGiftCardEntryFlow to start Gift Card Entry.
         await _onStartGiftCardEntryFlow();
         break;
       case PaymentType.cardPayment:
@@ -106,8 +106,7 @@ class BuySheetState extends State<BuySheet> {
     var uuid = Uuid().v4();
 
     if (verificationToken == null) {
-      print(
-          'curl --request POST $hostUrl/v2/payments \\'
+      print('curl --request POST $hostUrl/v2/payments \\'
           '--header \"Content-Type: application/json\" \\'
           '--header \"Authorization: Bearer YOUR_ACCESS_TOKEN\" \\'
           '--header \"Accept: application/json\" \\'

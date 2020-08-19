@@ -15,11 +15,13 @@
 */
 import 'dart:async';
 import 'dart:io' show Platform;
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:small_b/models.dart';
-import 'package:small_b/in_app_payments.dart';
 import 'package:small_b/google_pay_constants.dart' as google_pay_constants;
+import 'package:small_b/in_app_payments.dart';
+import 'package:small_b/models.dart';
+
 import 'colors.dart';
 import 'config.dart';
 import 'widgets/buy_sheet.dart';
@@ -55,6 +57,9 @@ class HomeScreenState extends State<HomeScreen> {
     var canUseApplePay = false;
     var canUseGooglePay = true;
     if (Platform.isAndroid) {
+      print(squareLocationId +
+          " " +
+          (google_pay_constants.environmentTest).toString());
       await InAppPayments.initializeGooglePay(
           squareLocationId, google_pay_constants.environmentTest);
       canUseGooglePay = await InAppPayments.canUseGooglePay;
@@ -68,6 +73,7 @@ class HomeScreenState extends State<HomeScreen> {
       isLoading = false;
       applePayEnabled = canUseApplePay;
       googlePayEnabled = canUseGooglePay;
+      print(googlePayEnabled.toString() + "*************************");
     });
   }
 
@@ -102,7 +108,7 @@ class HomeScreenState extends State<HomeScreen> {
                 ))
               : BuySheet(
                   applePayEnabled: applePayEnabled,
-                  googlePayEnabled: googlePayEnabled,
+                  googlePayEnabled: true,
                   applePayMerchantId: applePayMerchantId,
                   squareLocationId: squareLocationId)));
 }
