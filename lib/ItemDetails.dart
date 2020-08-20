@@ -206,7 +206,7 @@ class _ItemDetailsState extends State<ItemDetails> {
                     context,
                     MaterialPageRoute(builder: (context) => HomeScreen()),
                   ),
-                  child: Text('Use Coins'),
+                  child: Text('Pay Upto 20% in Coins'),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(18.0),
                       side: BorderSide(color: Colors.cyan)),
