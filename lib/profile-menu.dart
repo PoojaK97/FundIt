@@ -94,6 +94,21 @@ class _ProfileMenuState extends State<ProfileMenu> {
                   fontWeight: FontWeight.w600),
             )),
           ),
+          FlatButton(
+            shape: new RoundedRectangleBorder(
+                borderRadius:
+                new BorderRadius.circular(30.0)),
+            color: Colors.grey[200],
+            onPressed: () {},
+            child: Text(
+              'Coins Earned : 26950',
+              style: TextStyle(
+                  fontFamily: 'Typewriter',
+                  fontSize: 15,
+                  fontWeight: FontWeight.w700,
+                  color: Colors.indigo[700]),
+            ),
+          ),
           Padding(
             padding: const EdgeInsets.fromLTRB(18, 15, 8, 10),
             child: Text(
