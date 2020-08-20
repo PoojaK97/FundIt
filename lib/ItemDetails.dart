@@ -20,8 +20,7 @@ class _ItemDetailsState extends State<ItemDetails> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               SizedBox(height: 20),
-              Image.asset("lib/images/elon_musk.png"),
-              Image.asset("lib/images/elon_musk.png"),
+              Image.asset("lib/images/watch.png"),
               Padding(
                 padding: const EdgeInsets.fromLTRB(0, 8, 8, 18),
                 child: Text(
@@ -138,6 +137,7 @@ class _ItemDetailsState extends State<ItemDetails> {
                   ],
                 )
               ]),
+              Image.asset("lib/images/watch_details.png"),
               Padding(
                 padding: const EdgeInsets.fromLTRB(8, 25, 8, 25),
                 child: Text('Product Highlights',
