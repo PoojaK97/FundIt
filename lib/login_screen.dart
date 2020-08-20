@@ -2,10 +2,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:small_b/ItemDetails.dart';
 import 'package:small_b/profile-menu.dart';
-import 'package:small_b/register_screen.dart';
 
 import 'constants.dart';
 // import 'services/authservice.dart';
@@ -283,7 +282,7 @@ class _LoginScreenState extends State<LoginScreen> {
               recognizer: new TapGestureRecognizer()
                 ..onTap = () => Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => RegisterScreen()),
+                      MaterialPageRoute(builder: (context) => ItemDetails()),
                     ),
               style: TextStyle(
                 color: Colors.white,
