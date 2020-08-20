@@ -7,6 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:small_b/details.dart';
 import 'package:small_b/profile2.dart';
+import 'package:small_b/shopping_list.dart';
 
 import 'job.dart';
 import 'liked.dart';
@@ -211,6 +212,15 @@ class _ProfileMenuState extends State<ProfileMenu> {
                               builder: (context) => ProfileMenu2()),
                         ),
                     child: Text('Highlights',
+                        style: Theme.of(context).textTheme.headline4)),
+
+                FlatButton(
+                    onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ShoppingMenu()),
+                    ),
+                    child: Text('Shop',
                         style: Theme.of(context).textTheme.headline4))
               ],
             ),
