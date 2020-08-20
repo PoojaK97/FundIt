@@ -215,7 +215,7 @@ class _ItemDetailsState extends State<ItemDetails> {
                 child: RaisedButton(
                   onPressed: () => Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => HomeScreen()),
+                    MaterialPageRoute(builder: (context) => DeliveryAddress()),
                   ),
                   child: Text('Buy at MRP'),
                   shape: RoundedRectangleBorder(
