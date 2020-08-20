@@ -1,8 +1,8 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:small_b/constants.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 
 final _firestore = FirebaseFirestore.instance;
 User loggedInUser;
@@ -124,18 +124,18 @@ class MessagesStream extends StatelessWidget {
         List<MessageBubble> messageBubbles = [];
         for (var message in messages) {
           print(message.data);
-          final messageText = message.data['text'];
-          final messageSender = message.data["sender"];
-          final messageTime = message.data["time"];
-          final currentUsser = loggedInUser.email;
-          final messageBubble = MessageBubble(
-            sender: messageSender,
-            text: messageText,
-            time: messageTime,
-            isMe: currentUsser == messageSender,
-          );
-          messageBubbles.add(messageBubble);
-          messageBubbles.sort((a, b) => b.time.compareTo(a.time));
+//          final messageText = message.data['text'];
+//          final messageSender = message.data["sender"];
+//          final messageTime = message.data["time"];
+//          final currentUsser = loggedInUser.email;
+//          final messageBubble = MessageBubble(
+//            sender: messageSender,
+//            text: messageText,
+//            time: messageTime,
+//            isMe: currentUsser == messageSender,
+//          );
+//          messageBubbles.add(messageBubble);
+//          messageBubbles.sort((a, b) => b.time.compareTo(a.time));
         }
         return Expanded(
           child: ListView(
