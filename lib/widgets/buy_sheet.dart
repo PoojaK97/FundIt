@@ -380,11 +380,11 @@ class BuySheetState extends State<BuySheet> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  child: Image(image: AssetImage("assets/iconCookie.png")),
+                  child: Image(image: AssetImage("assets/invest.png")),
                 ),
                 Container(
                   child: Text(
-                    'Super Cookie',
+                    'Invest',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 28,
@@ -393,7 +393,7 @@ class BuySheetState extends State<BuySheet> {
                 ),
                 Container(
                   child: Text(
-                    "Instantly gain special powers \nwhen ordering a super cookie",
+                    "Help Startup's grow by investing in them ",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 16,
@@ -402,7 +402,8 @@ class BuySheetState extends State<BuySheet> {
                 ),
                 Container(
                   margin: EdgeInsets.only(top: 32),
-                  child: CookieButton(text: "Buy", onPressed: _showOrderSheet),
+                  child: CookieButton(
+                      text: "Confirm Investment", onPressed: _showOrderSheet),
                 ),
               ],
             )),

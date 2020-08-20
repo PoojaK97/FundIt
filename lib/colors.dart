@@ -20,7 +20,7 @@ Color alto = Color(0xFFD8D8D8);
 Color jungleGreen = Color(0xFF24988D);
 Color boulder = Color(0xFF7B7B7B);
 
-Color mainBackgroundColor = monteCarlo;
+Color mainBackgroundColor = boulder;
 Color closeButtonColor = alto;
 Color mainButtonColor = jungleGreen;
 Color mainTextColor = jungleGreen;
