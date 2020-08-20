@@ -19,10 +19,8 @@ class _ItemDetailsState extends State<ItemDetails> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               SizedBox(height: 20),
-              const Image(
-                image: NetworkImage(
-                    'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg'),
-              ),
+              Image.asset("lib/images/elon_musk.png"),
+              Image.asset("lib/images/elon_musk.png"),
               Padding(
                 padding: const EdgeInsets.fromLTRB(0, 8, 8, 18),
                 child: Text(
@@ -214,10 +212,10 @@ class _ItemDetailsState extends State<ItemDetails> {
               ),
               Center(
                 child: RaisedButton(
-                  //onPressed: () => Navigator.push(
-                  //context,
-                  //MaterialPageRoute(builder: (context) => HomeScreen()),
-                  //),
+                  onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomeScreen()),
+                  ),
                   child: Text('Buy at MRP'),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(18.0),
