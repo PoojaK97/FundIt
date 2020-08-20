@@ -149,7 +149,7 @@ class _ShippingInformation extends StatelessWidget {
         children: <Widget>[
           Padding(padding: EdgeInsets.only(left: 30)),
           Text(
-            "Ship to",
+            "Shipping Address ",
             style: TextStyle(fontSize: 16, color: mainTextColor),
           ),
           Padding(padding: EdgeInsets.only(left: 30)),
@@ -158,7 +158,7 @@ class _ShippingInformation extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  "Lauren Nobel",
+                  "Elon Musk",
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
                   textAlign: TextAlign.center,
                 ),
