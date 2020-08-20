@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:small_b/OrderSuccessful.dart';
 
 import 'constants.dart';
 
@@ -92,7 +93,10 @@ class _DeliveryAddressState extends State<DeliveryAddress> {
       width: double.infinity,
       child: RaisedButton(
         elevation: 5.0,
-        onPressed: () {},
+        onPressed: () => Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => OrderSuccessful()),
+        ),
         padding: EdgeInsets.all(15.0),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(30.0),
