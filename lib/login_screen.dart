@@ -30,7 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
     bool isSignedIn = await _googleSignIn.isSignedIn();
     if (isSignedIn) {
       // if so, return the current user
-      _user = await _auth.currentUser();
+      _user = await _auth.currentUser;
     } else {
       final GoogleSignInAccount googleUser = await _googleSignIn.signIn();
       final GoogleSignInAuthentication googleAuth =
