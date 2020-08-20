@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:small_b/main_pay.dart';
+
+import 'DeliveryAddress.dart';
 
 class ItemDetails extends StatefulWidget {
   @override
@@ -204,7 +205,7 @@ class _ItemDetailsState extends State<ItemDetails> {
                 child: RaisedButton(
                   onPressed: () => Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => HomeScreen()),
+                    MaterialPageRoute(builder: (context) => DeliveryAddress()),
                   ),
                   child: Text('Pay Upto 20% in Coins'),
                   shape: RoundedRectangleBorder(
